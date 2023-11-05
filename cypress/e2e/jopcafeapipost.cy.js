@@ -5,14 +5,14 @@ describe('Get Jobs Test', () => {
 
     let positionBody = {
         "position": "QA",
-        "company": "mycompan11",
+        "company": "mycompan61",
         "location": "Toronto",
         "seniority": "junior",
         "link": "www.linkedin.com",
         "description": "some text",
         "time": "two hours ago",
         "salary": "100k",
-        "date": "2010-06-06T12:00:00"
+        "date": "2000-06-06T12:00:00"
     }
     let id;
     let adminKey = 'adminadmin'
@@ -29,7 +29,7 @@ describe('Get Jobs Test', () => {
             console.log(response.body)
             id = response.body.id
             expect(response.status).equal(201)
-            expect(response.body.company).equal('mycompan11')
+            expect(response.body.company).equal('mycompan61')
             cy.deletePositionById(id)
         })
     })
