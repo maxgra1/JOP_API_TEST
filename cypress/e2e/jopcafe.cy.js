@@ -20,13 +20,13 @@ describe('Get Jobs Test', () => {
       var result = response.body.content[1]
     console.log(result)
     expect(result).have.property("id")
-    expect(result.id).equal("65428ced3f7d791f7b3e7b44")
-
+    expect(result.id).equal("65428d7c3f7d791f7b3e7b62")
+    
     expect(result).have.property("location")
-    expect(result.location).equal("Lake Ewald")
+    expect(result.location).equal("New Guiseppe")
 
     expect(result).have.property("position")
-    expect(result.position).equal("Human Usability Supervisor")
+    expect(result.position).equal("Global Web Designer")
 
     expect(result).have.property("link")
     expect(result.link).contain("http")

@@ -46,17 +46,17 @@ describe('Get Jobs Test', () => {
                 expect(response.status).equal(201)
                 expect(response.body.company).equal(element.company)
                 expect(response.body.position).equal(element.position);
-                    expect(response.body.location).equal(element.location);
-                    expect(response.body.seniority).equal(element.seniority);
-                    expect(response.body.link).equal(element.link);
-                    expect(response.body.description).equal(element.description);
-                    expect(response.body.time).equal(element.time);
+                expect(response.body.location).equal(element.location);
+                expect(response.body.seniority).equal(element.seniority);
+                expect(response.body.link).equal(element.link);
+                expect(response.body.description).equal(element.description);
+                expect(response.body.time).equal(element.time);
                 cy.deletePositionById(id)
 
             })
         })
     })
-   // Я ПОПРОБЫВАЛ метод GET НО ПОЧЕМУ-ТО НЕ РАБОТАЕТ
+    // Я ПОПРОБЫВАЛ метод GET НО ПОЧЕМУ-ТО НЕ РАБОТАЕТ
     /* //describe('Тest API Jobka', () => {
         const adminKey = 'adminadmin'; а
 
@@ -86,7 +86,7 @@ describe('Get Jobs Test', () => {
                 });
             });
         }); */
-   // });
+    // });
 
     afterEach(() => {
         cy.deletePositionById(id)
