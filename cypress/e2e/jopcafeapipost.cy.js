@@ -56,7 +56,7 @@ describe('Get Jobs Test', () => {
             })
         })
     })
-   // Я ПОПРОБЫВАЛ ТАК НО ПОЧЕМУ НЕ РАБОТАЕТ
+   // Я ПОПРОБЫВАЛ метод GET НО ПОЧЕМУ-ТО НЕ РАБОТАЕТ
     /* //describe('Тest API Jobka', () => {
         const adminKey = 'adminadmin'; а
 
