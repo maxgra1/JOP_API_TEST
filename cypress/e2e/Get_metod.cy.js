@@ -6,12 +6,11 @@ describe('GET Endpoint Search Parameters Tests', () => {
     const testId = '65428d7c3f7d791f7b3e7b62'; 
     cy.request({
       method: 'GET',
-      url: 'http://api.jobka.net:8081/jobs?id=65428d7c3f7d791f7b3e7b62'
+      url: 'http://api.jobka.net:8081/jobs?id='+ testId
     }).then((response) => {
       console.log(response.body)
       expect(response.status).to.eq(200);
       expect(response.body.content[0].id).to.eq(testId);
-      cy.pause
     });
   });
 
@@ -19,7 +18,7 @@ describe('GET Endpoint Search Parameters Tests', () => {
     const testDate = '2022-06-06';
     cy.request({
       method: 'GET',
-      url: `${baseUrl}?date=2022-06-06`
+      url: `${baseUrl}?date=` + testDate
     }).then((response) => {
       expect(response.status).to.eq(200);
       response.body.content.forEach((job) => {
